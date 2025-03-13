@@ -19,6 +19,7 @@ private JwtService jwtService;
 
     public String authenticate(LoginDto dto){
         Optional<User> opUser=  userRepository.findByUsername(dto.getUserName());
+        system.out.println("100");
 
         if(opUser.isPresent()){
             User user = opUser.get();
